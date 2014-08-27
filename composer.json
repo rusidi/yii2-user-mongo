@@ -1,0 +1,23 @@
+{
+    "name": "sheillendra/yii2-user-mongo",
+    "description": "Yii2 User Management Module with MongoDb",
+    "keywords": ["user", "sheillendra", "yii2", "yii", "authenticate","mongoDb","user mongo"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sheillendra",
+            "email": "sheillendra@yahoo.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "yiisoft/mongodb": "*",
+        "sheillendra/yii2-theme": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "sheillendra\\usermongo\\": ""
+        }
+    }
+}
