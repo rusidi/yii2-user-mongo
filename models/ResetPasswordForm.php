@@ -1,7 +1,7 @@
 <?php
 namespace sheillendra\usermongo\models;
 
-use common\models\User;
+use sheillendra\usermongo\models\User;
 use yii\base\InvalidParamException;
 use yii\base\Model;
 use Yii;
