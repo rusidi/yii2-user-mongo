@@ -16,6 +16,7 @@ class Module extends \yii\base\Module {
         ];
 
         if (isset(Yii::$app->view->theme->active)) {
+            unset(Yii::$app->viewPath); //jika home bukan di frontend folder, tapi dari sebuah module
             Yii::$app->view->theme->pathMap['@sheillendra/usermongo/views'] = [
                 '@sheillendra/usermongo/themes/'
                 . Yii::$app->view->theme->active . '/views'
