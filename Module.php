@@ -23,5 +23,7 @@ class Module extends \yii\base\Module {
             ];
         }
     }
-
+    public function getNameSpace(){
+        return '@'.__NAMESPACE__;
+    }
 }
