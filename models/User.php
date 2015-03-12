@@ -1,5 +1,4 @@
 <?php
-
 namespace sheillendra\usermongo\models;
 
 use Yii;
@@ -12,7 +11,6 @@ class User extends ActiveRecord implements IdentityInterface {
 
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
-    const ROLE_USER = 10;
 
     public static function getDb() {
         return Yii::$app->get('db');
@@ -30,8 +28,7 @@ class User extends ActiveRecord implements IdentityInterface {
      */
     public function attributes() {
         return ['_id', 'username', 'auth_key', 'password_hash',
-            'password_reset_token', 'email',
-            'role', 'status', 'created_at', 'updated_at'];
+            'password_reset_token', 'email', 'status', 'created_at', 'updated_at'];
     }
 
     /**
@@ -52,8 +49,6 @@ class User extends ActiveRecord implements IdentityInterface {
             ['email', 'unique'],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
-            ['role', 'default', 'value' => self::ROLE_USER],
-            ['role', 'in', 'range' => [self::ROLE_USER]],
         ];
     }
 
