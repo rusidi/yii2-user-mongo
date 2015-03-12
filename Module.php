@@ -5,7 +5,7 @@ namespace sheillendra\usermongo;
 use Yii;
 
 class Module extends \yii\base\Module {
-
+    public $connectionName = 'db';
     public $controllerNamespace = 'sheillendra\usermongo\controllers';
     public $defaultRoute = 'signup';
     public function init() {

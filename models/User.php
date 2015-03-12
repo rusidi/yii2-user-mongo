@@ -13,7 +13,7 @@ class User extends ActiveRecord implements IdentityInterface {
     const STATUS_ACTIVE = 10;
 
     public static function getDb() {
-        return Yii::$app->get('db');
+        return Yii::$app->get(Yii::$app->getModule('user')->connectionName);
     }
 
     /**
